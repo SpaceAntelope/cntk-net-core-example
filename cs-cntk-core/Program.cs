@@ -17,6 +17,7 @@ namespace cs_cntk_core
     {
         static void ResolveDepPaths()
         {
+            Console.WriteLine(System.Runtime.InteropServices.RuntimeInformation.OSDescription);
 
             var cntkPath = Assembly.GetAssembly(typeof(CNTK.CNTKLib)).CodeBase.Replace("file:///", "");
             var supportPath = Path.GetFullPath(Path.Combine(cntkPath, "../../../Support/x64/Release"));
